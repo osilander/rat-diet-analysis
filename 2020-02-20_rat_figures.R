@@ -64,27 +64,27 @@ if(preprocess) {
 	hq$Logalignment.length <- log10(hq$alignment.length)
 	
 	### need to parse kingdom and assign taxonid only, not names
-	k <- read.table(file="./fig_data/MEGAN_kingdom.txt")
+	k <- read.table(file="./fig_data/Megan_kingdom.txt")
 	colnames(k) <- c("query.def2", "Megan.Kingdom")
 	hq <- join(hq, k, by="query.def2", match="first")
 	# kingdom
-	p <- read.table(file="./fig_data/MEGAN_phylum.txt")
+	p <- read.table(file="./fig_data/Megan_phylum.txt")
 	colnames(p) <- c("query.def2", "Megan.Phylum")
 	hq <- join(hq, p, by="query.def2", match="first")
 	# class
-	c <- read.table(file="./fig_data/MEGAN_class.txt")
+	c <- read.table(file="./fig_data/Megan_class.txt")
 	colnames(c) <- c("query.def2", "Megan.Class")
 	hq <- join(hq, c, by="query.def2", match="first")
 	# order
-	o <- read.table(file="./fig_data/MEGAN_order.txt")
+	o <- read.table(file="./fig_data/Megan_order.txt")
 	colnames(o) <- c("query.def2", "Megan.Order")
 	hq <- join(hq, o, by="query.def2", match="first")
 	#family
-	f <- read.table(file="./fig_data/MEGAN_family.txt")
+	f <- read.table(file="./fig_data/Megan_family.txt")
 	colnames(f) <- c("query.def2", "Megan.Family")
 	hq <- join(hq, f, by="query.def2", match="first")
 	#genus
-	g <- read.table(file="./fig_data/MEGAN_genus.txt")
+	g <- read.table(file="./fig_data/Megan_genus.txt")
 	colnames(g) <- c("query.def2", "Megan.Genus")
 	hq <- join(hq, g, by="query.def2", match="first")
 	
